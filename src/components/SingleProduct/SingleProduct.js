@@ -4,7 +4,7 @@ import { Categories, Footer, Header } from "../common";
 import data from "../data";
 function SingleProduct(props) {
   const singleProduct = data.products.find(
-    (product) => product.id == props.match.params.id
+    (product) => product.id === props.match.params.id
   );
   return (
     <div className="grid-container">
@@ -18,7 +18,7 @@ function SingleProduct(props) {
         </div>
         <div className="details">
           <div className="details-image">
-            <img src={singleProduct.image} />
+            <img src={singleProduct.image} alt="" />
           </div>
           <div className="details-info">
             <ul>
